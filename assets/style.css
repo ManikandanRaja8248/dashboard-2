@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+.main-container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+.nav-bar{
+    height:9vh;
+    width: 100vw;
+    display: flex;
+    background-color: #00b2ff; 
+    align-items: center; 
+    justify-content: space-between;   
+}
+p{
+    margin: 0;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    letter-spacing: 0.8px;
+}
+.nav-bar a:hover{
+    text-decoration: underline;
+}
+.vicara-logo{
+    margin-right: 1.5rem;
+}
+
+.page-content{
+    height:91vh;
+    width: 100vw;
+    display: flex; 
+    background-color: black;
+
+}
+.current-status-container{
+    height: 100%;
+    width: 90%;     
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.becon-table-row{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.status-table-heading{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    color: #FFF;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #00b2ff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.model-dropdown{
+    width: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    width: 15rem;
+    color: #000;
+}
+.main-table{
+   display: flex; 
+   flex-direction: column;
+}
+.battery-div{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bi-battery-full::before{
+    margin-right: 1rem;
+}
+.heading{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+.nav-link{
+    display: flex;
+}
+.events-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+    color: #fff;
+}
+.event-heading{
+    width: 90%;
+    /* background-color: #00b2ff; */
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+
+}
+.event-field{
+    background-color: #00b2ff;
+    padding: 1rem;
+    border-radius: 10px;    
+}
+.data-field{
+    background-color: #FFF;
+    padding: 1rem;
+    border-radius: 10px;  
+}
+.event-status{
+    width: 90%;
+    color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
