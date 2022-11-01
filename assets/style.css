@@ -48,14 +48,20 @@ p{
     margin-right: auto;
     margin-left: auto;
 }
+.beacon-container{
+    width: 100%;
+    overflow-y: auto;
+    height: 30rem;
+    
+}
 
 .becon-table-row{
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
     margin-bottom: 1rem;
     border-radius: 10px;
-    width: 100%;
+    width: 98%;
     background-color: #fff;
     color: #000;
     padding: 1rem;
@@ -66,10 +72,10 @@ p{
 .status-table-heading{
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     color: #FFF;
     border-radius: 10px;
-    width: 100%;
+    width: 98%;
     background-color: #00b2ff;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -77,14 +83,12 @@ p{
     font-weight: 600;
     letter-spacing: 0.5px;
 }
-
 .model-dropdown{
-    width: 10rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
     margin-top: 3rem;
-    width: 15rem;
+    width: 20rem;
     color: #000;
 }
 .main-table{
@@ -108,6 +112,7 @@ p{
 .nav-link{
     display: flex;
 }
+
 .events-container{
     height: 100%;
     width: 100%;
@@ -115,14 +120,23 @@ p{
     flex-direction: column;  
     color: #fff;
 }
+.event-data-field-container{
+    overflow-y: scroll;
+    width: 95%;
+    height: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+
+}
 .event-heading{
-    width: 90%;
+    width: 92%;
     /* background-color: #00b2ff; */
     border-radius: 10px;
     margin-right: auto;
     margin-left: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.2fr 0.8fr 2fr;
     gap:1rem;
     text-align: center;
     font-size: 1.2rem;
@@ -141,10 +155,10 @@ p{
     border-radius: 10px;  
 }
 .event-status{
-    width: 90%;
+    width: 96%;
     color: #000;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.2fr 0.8fr 2fr;
     gap: 1rem;
     margin-top: 1rem;
     margin-left: auto;
@@ -154,5 +168,38 @@ p{
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.8px;
+    /* border:2px solid red; */
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00b2ff;
+  }
+  
+  /* Handle on hover */
+  /* ::-webkit-scrollbar-thumb:hover {
+    background: #00b2ff;
+  } */
+
+  @media only screen and (min-width: 1920px) {
+
+
+    .event-data-field-container {
+        height: 42rem;
+
+    }
+    .nav-bar a{
+        font-size: 2rem;
+    }
+
+  }
