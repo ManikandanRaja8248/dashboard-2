@@ -65,7 +65,7 @@ p{
     background-color: #fff;
     color: #000;
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
@@ -83,7 +83,7 @@ p{
     font-weight: 600;
     letter-spacing: 0.5px;
 }
-.model-dropdown{
+.car-model-dropdown{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
@@ -201,5 +201,95 @@ p{
     .nav-bar a{
         font-size: 2rem;
     }
+    .status-table-heading{
+        font-size: 1.7rem;
+    }
+    .beacon-container{
+        height: 50rem;
+        overflow-y: auto;
+    }
+    .becon-table-row {
+        font-size: 1.5rem;
+    }
+    .event-field{
+        font-size: 1.7rem;
+    }
+    .data-field{
+        font-size: 1.5rem;
+    }
+    .car-model-dropdown{
+        width: 30rem;
+        height: 5rem;
+    }
+    .Select-control{
+        width: 30rem;
+        height: 4rem;
+        border-radius: 15px;
+
+    }
+    .Select--single>.Select-control .Select-value, .Select-placeholder {
+        padding-top: 15px;
+        padding-left: 30px;
+    }
+    .has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label {
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+  }
+
+  @media only screen and (min-width: 2560px) {
+
+    .event-data-field-container {
+        height: 73rem;
+        overflow-y: auto;
+
+    }
+    .nav-bar a{
+        font-size: 3rem;
+    }
+    .vicara-logo{
+        width: 20rem;
+        height: 5rem;
+    }
+    .status-table-heading{
+        font-size: 2.5rem;
+        margin-bottom: 1.7rem;
+    }
+    .beacon-container{
+        overflow-y: auto;
+        height: 80rem;
+    }
+    .becon-table-row {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .event-field{
+        font-size: 2rem;
+    }
+    .data-field{
+        font-size: 2rem;
+    }
+    .car-model-dropdown{
+        width: 30rem;
+        height: 5rem;
+    }
+    .Select-control{
+        width: 30rem;
+        height: 4rem;
+        border-radius: 15px;
+
+    }
+    .Select--single>.Select-control .Select-value, .Select-placeholder {
+        padding-top: 15px;
+        padding-left: 30px;
+    }
+    .has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label {
+        color: #000;
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
 
   }

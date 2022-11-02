@@ -4,6 +4,7 @@ from app import app
 from app import server
 from pages import beacon, events
 
+
 app.layout=html.Div([
      dcc.Location(id='url', refresh=True),
       html.Div([
@@ -31,11 +32,11 @@ app.layout=html.Div([
               [Input('url', 'pathname')])
 def display_page(pathname):
     if pathname == '/pages/currentStatus':
-        return beacon.layout
+        return beacon.getBeaconLayout()
     if pathname == "/pages/events":
-        return events.layout
+        return events.getEventsLayout()
     else:
-        return beacon.layout
+        return beacon.getBeaconLayout()
 
 
 if __name__ == '__main__':

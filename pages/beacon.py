@@ -9,45 +9,53 @@ import dash_bootstrap_components as dbc
 from app import app
 import requests
 import json
+from server.server import getBeacons
 
-baseUrl = "http://52.74.198.240:60009"
-entity = "/beacon"
 
-def getBeacons():
-    url = baseUrl+entity
-    response = requests.get(url)
-    data = response.content.decode()
-    return data
+@app.callback(Output("beacon-container", "children"),
+              Input("interval-component", "n_intervals"))
+def updateBeaconPage(n):
+    data = getBeacons()
+    return html.Div(className="beacon-container", children=[
+        html.Div(children=[
+            html.Div(className="becon-table-row", children=[
+                html.Div(className="table-column",
+                         children=[data[i]["beacon_id"]]),
+                html.Div(className="table-column",
+                         children=[data[i]["license_plate_number"]]),
+                html.Div(className="table-column", children=[data[i]["zone"]]),
+                #  html.Div(className="table-column",children=["movingStatus"]),
+                html.Div(className="table-column battery-div", children=[
+                 html.I(className="bi bi-battery-full"),
+                 html.Div(children=[data[0]["battery_level"]]),
+                 ]),
+            ])
+        ], className="becon-table")for i in range(len(data))
+    ]),
 
-data = json.loads(getBeacons())
 
-layout = html.Div(className="current-status-container",children=[
-    html.Div(className="heading",children=[""]),
-    
-        html.Div(className ="status-table-heading",children=[
-         html.Div(className="table-column",children=["Beacon ID"]),
-         html.Div(className="table-column",children=["License Plate Number"]),
-         html.Div(className="table-column",children=["Zone"]),
-        #  html.Div(className="table-column",children=["Moving Status"]),
-         html.Div(className="table-column",children=["Battery Level"]),
-    ]) ,
+def getBeaconLayout():
 
-    html.Div(className="beacon-container",children=[
-         html.Div(children=[
-         html.Div(className ="becon-table-row",children=[
-         html.Div(className="table-column",children=[data[0]["beacon_id"]]),
-         html.Div(className="table-column",children=[data[0]["license_plate_number"]]),
-         html.Div(className="table-column",children=[data[0]["zone"]]),
-        #  html.Div(className="table-column",children=["movingStatus"]),
-         html.Div(className="table-column battery-div",children=[
-             html.I(className="bi bi-battery-full"),
-             html.Div(children=[data[0]["battery_level"]]),
-             ]),
-    ]) 
-    ],className="becon-table")for i in range (10)  
-    ])
-   
-    
-]
-   
-)
+    return html.Div(className="current-status-container", children=[
+        html.Div(className="heading", children=[""]),
+
+        html.Div(className="status-table-heading", children=[
+            html.Div(className="table-column", children=["Beacon ID"]),
+            html.Div(className="table-column",
+                     children=["License Plate Number"]),
+            html.Div(className="table-column", children=["Zone"]),
+            #  html.Div(className="table-column",children=["Moving Status"]),
+            html.Div(className="table-column", children=["Battery Level"]),
+        ]),
+        html.Div(id="beacon-container"),
+        dcc.Interval(
+            id='interval-component',
+            interval=3*1000  # in milliseconds
+        )
+
+
+    ]
+
+    )
+
+
