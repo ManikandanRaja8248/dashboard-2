@@ -153,6 +153,7 @@ p{
     background-color: #FFF;
     padding: 1rem;
     border-radius: 10px;  
+    color: #000;
 }
 .event-status{
     width: 96%;
@@ -191,7 +192,61 @@ p{
     background: #00b2ff;
   } */
 
-  @media only screen and (min-width: 1920px) {
+
+
+  /* car event page  */
+  .car-events-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+    color: #fff;
+}
+.car-event-container{
+
+}
+.car-event-heading{
+    width: 93%;
+    /* background-color: #00b2ff; */
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap:1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    margin-top: 3rem;
+}
+.car-event-content{
+    overflow-y: auto;
+    width: 95%;
+    height: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+.car-event-data{
+    width: 98%;
+    /* background-color: #00b2ff; */
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap:1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    margin-top: 1.5rem;
+}
+
+
+
+     @media only screen and (min-width: 1920px) {
 
 
     .event-data-field-container {
@@ -235,6 +290,9 @@ p{
         color: #000;
         font-size: 1.5rem;
         font-weight: 600;
+    }
+    .car-event-content{
+        height: 45rem;
     }
 
   }
@@ -289,6 +347,9 @@ p{
         color: #000;
         font-size: 1.7rem;
         font-weight: 600;
+    }
+    .car-event-content{
+        height: 75rem;
     }
 
 

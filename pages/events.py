@@ -6,7 +6,7 @@ from server.server import getAllCars
 
 
 
-baseUrl = "http://52.74.198.240:60009"
+baseUrl = "http://3.6.195.213:60009"
 
 # @app.callback(Output("event-data-field-container","children"),
 #                Input("interval-component","n_intervals"))

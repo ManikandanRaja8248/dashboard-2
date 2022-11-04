@@ -27,7 +27,7 @@ def updateBeaconPage(n):
                 #  html.Div(className="table-column",children=["movingStatus"]),
                 html.Div(className="table-column battery-div", children=[
                  html.I(className="bi bi-battery-full"),
-                 html.Div(children=[data[0]["battery_level"]]),
+                 html.Div(children=[data[i]["battery_level"]]),
                  ]),
             ])
         ], className="becon-table")for i in range(len(data))
